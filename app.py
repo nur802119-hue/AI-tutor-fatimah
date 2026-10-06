@@ -25,7 +25,7 @@ st.set_page_config(
 # =========================================================
 
 
-FOLDER_DATABASE = "database"
+FOLDER_DATABASE = "."
 
 
 
