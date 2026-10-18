@@ -563,7 +563,47 @@ def ambil_potongan_relevan(pertanyaan, isi, jumlah_maksimal=1800):
     if not terpilih:
         terpilih = [daftar_skor[0][2][:jumlah_maksimal]]
     return "\n\n".join(terpilih)
+# =========================================================
+# FUNGSI MEMBACA BUKU PANDUAN
+# =========================================================
 
+PANDUAN_PATH = os.path.join(
+    BASE_DIR,
+    "buku_panduan_materi_teks_deskripsi.txt"
+)
+
+
+def baca_buku_panduan():
+    if not os.path.exists(PANDUAN_PATH):
+        return {}
+
+    with open(PANDUAN_PATH, "r", encoding="utf-8") as file:
+        isi = file.read()
+
+    pola = r"(?m)^\s*\[BAB-(\d{2})\]\s*(.*?)\s*$"
+    bagian = list(re.finditer(pola, isi))
+
+    daftar_bab = {}
+
+    for i, cocok in enumerate(bagian):
+        nomor = cocok.group(1)
+        judul = cocok.group(2).strip()
+
+        awal = cocok.end()
+        akhir = (
+            bagian[i + 1].start()
+            if i + 1 < len(bagian)
+            else len(isi)
+        )
+
+        isi_bab = isi[awal:akhir].strip()
+
+        daftar_bab[f"BAB-{nomor} | {judul}"] = isi_bab
+
+    return daftar_bab
+
+
+buku_panduan = baca_buku_panduan()
 
 # Database TXT dibaca saat aplikasi dimulai.
 database = baca_database()
@@ -648,6 +688,7 @@ with st.sidebar:
     menu = st.radio(
         "Pilih Menu",
         [
+            "📘 Buku Panduan",
             "🏠 Beranda",
             "📝 Presensi",
             "📚 Daftar Materi",
