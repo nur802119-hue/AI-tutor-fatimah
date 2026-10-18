@@ -563,47 +563,8 @@ def ambil_potongan_relevan(pertanyaan, isi, jumlah_maksimal=1800):
     if not terpilih:
         terpilih = [daftar_skor[0][2][:jumlah_maksimal]]
     return "\n\n".join(terpilih)
-# =========================================================
-# FUNGSI MEMBACA BUKU PANDUAN
-# =========================================================
 
-PANDUAN_PATH = os.path.join(
-    BASE_DIR,
-    "buku_panduan_materi_teks_deskripsi.txt"
 )
-
-
-def baca_buku_panduan():
-    if not os.path.exists(PANDUAN_PATH):
-        return {}
-
-    with open(PANDUAN_PATH, "r", encoding="utf-8") as file:
-        isi = file.read()
-
-    pola = r"(?m)^\s*\[BAB-(\d{2})\]\s*(.*?)\s*$"
-    bagian = list(re.finditer(pola, isi))
-
-    daftar_bab = {}
-
-    for i, cocok in enumerate(bagian):
-        nomor = cocok.group(1)
-        judul = cocok.group(2).strip()
-
-        awal = cocok.end()
-        akhir = (
-            bagian[i + 1].start()
-            if i + 1 < len(bagian)
-            else len(isi)
-        )
-
-        isi_bab = isi[awal:akhir].strip()
-
-        daftar_bab[f"BAB-{nomor} | {judul}"] = isi_bab
-
-    return daftar_bab
-
-
-buku_panduan = baca_buku_panduan()
 
 # Database TXT dibaca saat aplikasi dimulai.
 database = baca_database()
@@ -2211,42 +2172,55 @@ elif menu == "🧊 Ice Breaking":
             use_container_width=True
         )
 
+
 elif menu == "📘 Buku Panduan":
 
-    st.header("📘 Buku Panduan Penggunaan Aplikasi")
-    st.write(
-        "Pilih bab untuk membaca petunjuk penggunaan "
-        "Ruang Belajar Digital."
-    )
+    st.title("📘 Buku Panduan Penggunaan Aplikasi")
+    st.subheader("Ruang Belajar Digital")
+    st.write("Bahasa Indonesia — Kelas IX")
 
-    if not buku_panduan:
-        st.warning(
-            "Buku panduan belum ditemukan atau isinya belum terbaca. "
-            "Pastikan file TXT sudah diunggah dengan benar."
-        )
+    st.markdown("""
+    ## 1. Tentang Aplikasi
 
-    else:
-        daftar_judul_bab = list(buku_panduan.keys())
+    Ruang Belajar Digital merupakan aplikasi pembelajaran
+    Bahasa Indonesia untuk siswa kelas IX, khususnya materi
+    teks deskripsi.
 
-        bab_dipilih = st.selectbox(
-            "Pilih bab yang ingin dibaca:",
-            daftar_judul_bab
-        )
+    ## 2. Cara Membuka Aplikasi
 
-        st.divider()
-        st.subheader(bab_dipilih)
-        st.text(buku_panduan[bab_dipilih])
+    1. Buka aplikasi melalui tautan yang diberikan guru.
+    2. Tunggu sampai halaman Beranda tampil.
+    3. Gunakan menu di sebelah kiri untuk memilih fitur.
 
-        with open(PANDUAN_PATH, "rb") as file:
-            isi_file = file.read()
+    ## 3. Mengenal Menu Aplikasi
 
-        st.download_button(
-            label="⬇️ Unduh Buku Panduan Lengkap",
-            data=isi_file,
-            file_name="buku_panduan_materi_teks_deskripsi.txt",
-            mime="text/plain",
-            use_container_width=True
-        )
+    - **🏠 Beranda:** melihat halaman utama.
+    - **📝 Presensi:** mengisi kehadiran.
+    - **📚 Daftar Materi:** melihat daftar materi.
+    - **🔎 Cari Materi:** mencari informasi materi.
+    - **📖 Belajar Materi:** membaca materi.
+    - **🎬 Media Ajar:** mengakses media pembelajaran.
+    - **📝 Latihan Soal:** mengerjakan latihan.
+    - **🎮 Game Edukasi:** belajar melalui permainan.
+    - **🧊 Ice Breaking:** mengikuti aktivitas penyegar suasana.
+    - **🏆 Nilai:** melihat hasil penilaian.
+
+    ## 4. Cara Belajar
+
+    1. Pilih Daftar Materi atau Belajar Materi.
+    2. Baca materi teks deskripsi.
+    3. Gunakan Media Ajar untuk membantu pemahaman.
+    4. Kerjakan Latihan Soal.
+    5. Gunakan Game Edukasi untuk berlatih.
+
+    ## 5. Tips Penggunaan
+
+    - Gunakan koneksi internet yang stabil.
+    - Baca petunjuk setiap fitur.
+    - Kerjakan latihan dengan teliti.
+    - Hubungi guru jika mengalami kendala.
+    """)
+
 # =========================================================
 # MENU NILAI
 # =========================================================
