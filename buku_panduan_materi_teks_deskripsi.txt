@@ -1,0 +1,764 @@
+################################################################
+#                                                              #
+#        BUKU PANDUAN PENGGUNAAN APLIKASI                      #
+#        MATERI TEKS DESKRIPSI                                 #
+#        Ruang Belajar Digital - Bahasa Indonesia Kelas IX     #
+#                                                              #
+################################################################
+
+Versi dokumen : 2.0
+Bahasa        : Indonesia
+Platform      : Aplikasi web (Python + Streamlit)
+Pengguna      : Siswa Kelas IX dan guru Bahasa Indonesia
+
+
+================================================================
+[BAB-00] PETUNJUK UNTUK PENGELOLA DATABASE
+================================================================
+ID        : BAB-00
+KATEGORI  : Administrasi
+KATA KUNCI: database, format, penanda, petunjuk
+
+- Dokumen dibagi menjadi bab. Setiap bab diawali blok penanda:
+  [BAB-XX], ID, KATEGORI, dan KATA KUNCI.
+- Satu bab = satu record. Pisahkan dokumen setiap kali muncul
+  baris pembatas "====" diikuti penanda [BAB-XX].
+- Tanda [PERIKSA] berarti bagian tersebut disusun dari nama menu
+  atau belum terlihat penuh di tangkapan layar, sehingga perlu
+  dicocokkan dengan aplikasi asli. Semua tanda [PERIKSA] dirangkum
+  di BAB-21.
+- Judul menu, nama tombol, dan teks dalam tanda kutip ditulis sama
+  persis dengan tampilan aplikasi.
+
+
+================================================================
+[BAB-01] TENTANG APLIKASI
+================================================================
+ID        : BAB-01
+KATEGORI  : Pengenalan
+KATA KUNCI: aplikasi, teks deskripsi, kelas IX, tujuan, pengguna
+
+Nama aplikasi : Materi Teks Deskripsi
+Label         : RUANG BELAJAR DIGITAL - KELAS IX
+Mata pelajaran: Bahasa Indonesia, Kelas IX
+Teknologi     : Python + Streamlit + TXT Knowledge Base
+                (jawaban pencarian diambil dari berkas teks materi,
+                tanpa API berbayar)
+
+Ajakan aplikasi:
+"Yuk, amati hal-hal di sekitar, temukan kata-kata menarik, lalu
+ceritakan objek dengan jelas dan kreatif!"
+
+Tujuan:
+1. Membantu siswa memahami materi teks deskripsi, dari pengertian
+   hingga langkah menulis (8 materi).
+2. Melatih siswa mengamati objek dengan pancaindra.
+3. Melatih siswa memilih kata yang tepat agar gambaran objek hidup.
+4. Menyediakan video, presentasi, latihan soal, dan game edukasi.
+5. Menyediakan kegiatan ice breaking untuk menyegarkan suasana.
+6. Membantu guru mencatat presensi dan menilai esai siswa.
+
+
+================================================================
+[BAB-02] CARA MEMBUKA APLIKASI
+================================================================
+ID        : BAB-02
+KATEGORI  : Memulai
+KATA KUNCI: membuka, tautan, peramban, internet, ponsel
+
+Langkah:
+1. Siapkan perangkat (ponsel, tablet, atau komputer) dan koneksi
+   internet yang stabil.
+2. Buka peramban, misalnya Safari atau Chrome.
+3. Ketik atau tempel tautan aplikasi dari guru, lalu tekan Go
+   atau Enter.
+4. Tunggu hingga halaman Beranda tampil. Jika aplikasi sedang
+   tidur karena lama tidak dipakai, tunggu beberapa saat sampai
+   aktif kembali.
+5. Aplikasi siap digunakan. Tidak perlu mengunduh atau memasang
+   apa pun.
+
+Tips:
+- Gunakan mode layar penuh pada game bila tersedia.
+- Jangan menutup atau memuat ulang halaman saat mengerjakan
+  presensi, latihan, atau game karena data sesi dapat hilang.
+
+
+================================================================
+[BAB-03] MENGENAL TAMPILAN DAN MENU NAVIGASI
+================================================================
+ID        : BAB-03
+KATEGORI  : Navigasi
+KATA KUNCI: menu belajar, sidebar, navigasi, pilih menu
+
+Bagian atas layar:
+- Ikon panah ganda ">>" di kiri atas membuka "Menu Belajar".
+- Tombol "Fork", ikon GitHub, dan titik tiga di kanan atas adalah
+  bawaan Streamlit. Siswa tidak perlu memakainya.
+
+"Menu Belajar" (pilih salah satu, penanda merah = menu aktif):
+  1. Beranda
+  2. Presensi
+  3. Daftar Materi
+  4. Cari Materi
+  5. Belajar Materi
+  6. Media Ajar
+  7. Latihan Soal
+  8. Game Edukasi
+  9. Ice Breaking
+ 10. Nilai
+
+Cara berpindah menu:
+1. Ketuk ">>" di kiri atas (di komputer, menu biasanya sudah
+   terbuka di sisi kiri).
+2. Ketuk menu yang diinginkan.
+3. Halaman di sebelah kanan berganti sesuai menu.
+4. Di ponsel, tutup menu setelah memilih supaya isi halaman
+   terlihat penuh.
+
+Komponen yang sering muncul:
+- Kartu: kotak putih berisi judul dan penjelasan singkat.
+- Expander (panah kecil): ketuk untuk membuka atau menutup isi.
+- Tab: deretan judul di atas konten, ketuk untuk berpindah.
+  Garis merah di bawah tab menandai tab yang aktif.
+- Dropdown: kotak pilihan dengan panah ke bawah.
+
+
+================================================================
+[BAB-04] MENU BERANDA
+================================================================
+ID        : BAB-04
+KATEGORI  : Menu
+KATA KUNCI: beranda, ruang eksplorasi, amati objek, susun kata
+
+Fungsi: halaman sambutan dan pintu masuk menuju semua kegiatan.
+
+Isi halaman:
+1. Banner "Materi Teks Deskripsi" dengan keterangan
+   "Pembelajaran Bahasa Indonesia Kelas IX".
+2. Label penyemangat: Siap Membaca, Ayo Menulis, Amati Detail,
+   Ide Kreatif, Belajar Seru, Imajinasi, Semangat!
+3. "Ruang eksplorasi belajar", berisi tiga kartu alur belajar:
+   a. Amati Objek    : gunakan pancaindra untuk menemukan ciri
+                       khas objek yang akan dideskripsikan.
+   b. Susun Kata     : pilih kata yang tepat agar gambaran objek
+                       terasa jelas dan hidup.
+   c. Uji Pemahaman  : kerjakan latihan dan permainan untuk
+                       menguji pemahamanmu.
+4. "Pilih kegiatan yang ingin kamu mulai": gunakan menu di sebelah
+   kiri untuk membuka materi, mencari informasi, mengerjakan
+   latihan soal, bermain game edukasi, atau melihat nilai.
+5. Pesan motivasi: "Ingat: setiap tempat punya cerita. Perhatikan
+   detail kecil, pilih kata yang menarik, dan berani menuangkan
+   idemu!"
+
+Cara menggunakan:
+1. Baca tiga kartu untuk memahami alur: Amati Objek -> Susun
+   Kata -> Uji Pemahaman.
+2. Buka Menu Belajar, lalu pilih kegiatan pertama (disarankan
+   Presensi, kemudian Daftar Materi).
+
+
+================================================================
+[BAB-05] MENU PRESENSI
+================================================================
+ID        : BAB-05
+KATEGORI  : Menu
+KATA KUNCI: presensi, absen, kehadiran, nama, kelas, nomor absen
+
+Fungsi: mencatat kehadiran siswa.
+
+Informasi penting dari aplikasi:
+- Isi presensi dengan lengkap.
+- Data presensi disimpan selama sesi aplikasi berjalan. Data bisa
+  hilang jika halaman ditutup, dimuat ulang, atau aplikasi
+  restart.
+- Tanggal dan waktu dicatat otomatis saat presensi dikirim.
+
+Kolom isian:
+1. Nama Siswa        : ketik nama lengkap (petunjuk di kolom:
+                       "Masukkan nama lengkap").
+2. Kelas             : contoh: IX-A.
+3. Nomor Absen       : angka, ubah dengan tombol "-" dan "+"
+                       atau ketik langsung. Nilai awal 1.
+4. Status Kehadiran  : pilih dari dropdown. Nilai awal "Hadir".
+                       [PERIKSA] pilihan lain (misalnya Izin,
+                       Sakit, Alpa).
+
+Tombol: "SIMPAN PRESENSI".
+
+Langkah:
+1. Buka menu Presensi.
+2. Ketik Nama Siswa dan Kelas.
+3. Atur Nomor Absen sesuai daftar absen.
+4. Pilih Status Kehadiran.
+5. Tekan "SIMPAN PRESENSI".
+6. Pastikan muncul tanda berhasil. [PERIKSA] bentuk pesannya dan
+   apakah ada tabel rekap presensi.
+
+Catatan guru: ambil atau catat rekap sebelum sesi berakhir karena
+data tidak permanen.
+
+Kesalahan umum:
+- Kolom nama atau kelas kosong.
+- Nomor absen tidak sesuai daftar.
+
+
+================================================================
+[BAB-06] MENU DAFTAR MATERI
+================================================================
+ID        : BAB-06
+KATEGORI  : Menu
+KATA KUNCI: daftar materi, 8 materi, pengertian, kartu, pelajari
+
+Judul halaman: "Daftar Materi - Teks Deskripsi".
+Keterangan: "Delapan materi dari pengertian hingga langkah
+menulis. Pilih kartu untuk belajar."
+
+Tampilan:
+- Delapan kartu bernomor 1 sampai 8.
+- Setiap kartu memuat nomor, judul materi, penjelasan singkat,
+  dan expander "Pelajari Materi" untuk membuka isinya.
+
+Contoh kartu nomor 1:
+  Judul     : Pengertian Teks Deskripsi
+  Penjelasan: "Mengenal pengertian dan fungsi teks deskripsi."
+
+Kartu nomor 2 sampai 8 mengikuti pola yang sama, berurutan dari
+pengertian hingga langkah menulis. [PERIKSA] isi judul kartu 2-8.
+
+Cara menggunakan:
+1. Buka menu Daftar Materi.
+2. Gulir ke bawah untuk melihat seluruh kartu.
+3. Ketuk "Pelajari Materi" pada kartu yang dipilih untuk membuka
+   ringkasan materi.
+4. Untuk membaca secara lengkap, lanjut ke menu Belajar Materi.
+
+
+================================================================
+[BAB-07] MENU CARI MATERI
+================================================================
+ID        : BAB-07
+KATEGORI  : Menu
+KATA KUNCI: cari materi, tanya jawab, cari jawaban, pencarian
+
+Fungsi: menjawab pertanyaan siswa dengan bahasa sehari-hari.
+Jawaban diambil dari materi yang tersedia di aplikasi (basis
+pengetahuan berkas TXT), tanpa API berbayar.
+
+Tampilan:
+- Judul "Cari Materi".
+- Keterangan: "Tanyakan dengan bahasa sehari-hari. Jawaban
+  diambil dari materi yang tersedia, tanpa API berbayar."
+- Kolom pertanyaan: "Apa yang ingin kamu ketahui?"
+  Contoh yang tertera: "teks deskripsi itu apa?" / "Apa
+  ciri-cirinya?" / "Bagaimana cara membuatnya?"
+- Tombol "CARI JAWABAN".
+
+Langkah:
+1. Buka menu Cari Materi.
+2. Ketik pertanyaan pada kolom.
+3. Tekan "CARI JAWABAN".
+4. Baca jawaban yang muncul. Lanjutkan ke Belajar Materi untuk
+   penjelasan lengkap.
+
+Contoh pertanyaan yang cocok:
+- Teks deskripsi itu apa?
+- Apa ciri-ciri teks deskripsi?
+- Apa saja struktur teks deskripsi?
+- Bagaimana cara membuat teks deskripsi?
+- Apa fungsi pancaindra dalam menulis deskripsi?
+
+Tips:
+- Gunakan kalimat singkat dan kata kunci yang jelas.
+- Jika jawaban tidak muncul, ubah kata-kata pertanyaan.
+- Pertanyaan di luar materi teks deskripsi mungkin tidak
+  terjawab karena jawaban hanya diambil dari materi yang ada.
+
+
+================================================================
+[BAB-08] MENU BELAJAR MATERI
+================================================================
+ID        : BAB-08
+KATEGORI  : Menu
+KATA KUNCI: belajar materi, materi utama, buka materi lengkap
+
+Judul halaman: "Belajar Materi".
+Keterangan: "Baca perlahan, tandai ide penting, dan pahami
+contohnya."
+
+Bagian 1 - "Pilih materi yang ingin dipelajari:"
+- Dropdown berisi daftar berkas materi.
+- Setelah dipilih, isi berkas tampil di bawahnya dengan judul
+  dan teks.
+
+Bagian 2 - "8 Materi Teks Deskripsi"
+- Tulisan "Atau pilih salah satu materi utama:" dengan dropdown
+  berisi delapan materi utama. Nilai awal: "Pengertian Teks
+  Deskripsi".
+- Expander "Buka materi lengkap" menampilkan isi materi yang
+  dipilih.
+
+Langkah:
+1. Buka menu Belajar Materi.
+2. Pilih materi dari salah satu dropdown.
+3. Ketuk "Buka materi lengkap".
+4. Baca perlahan, tandai ide penting, dan perhatikan contoh.
+5. Lanjutkan ke Latihan Soal.
+
+Cara belajar yang disarankan:
+- Baca satu materi sampai selesai sebelum pindah ke materi lain.
+- Catat kata kunci dan contoh kalimat.
+- Ulangi materi yang belum dipahami.
+
+
+================================================================
+[BAB-09] MENU MEDIA AJAR
+================================================================
+ID        : BAB-09
+KATEGORI  : Menu
+KATA KUNCI: media ajar, video pembelajaran, powerpoint, presentasi
+
+Judul halaman: "Media Ajar Teks Deskripsi".
+Keterangan: "Pelajari materi melalui video dan presentasi
+PowerPoint."
+
+Kotak "Ruang Media Ajar": pilih video untuk pengantar materi atau
+buka presentasi PowerPoint untuk mempelajari teks deskripsi
+secara lebih terstruktur.
+
+Dua tab:
+1. Video Pembelajaran
+   - Judul: "Video Pembelajaran Teks Deskripsi".
+   - Petunjuk: simak penjelasan mengenai pengertian, ciri-ciri,
+     dan struktur teks deskripsi. Catat poin penting sebelum
+     mengerjakan latihan.
+   - Video ditampilkan langsung di halaman (tersedia pemutar
+     video bertajuk "Teks Deskripsi | Bahasa Indonesia").
+2. PowerPoint
+   - Berisi presentasi materi yang bisa dibuka dan dipelajari
+     secara terstruktur. [PERIKSA] cara tampil (ditampilkan di
+     halaman atau berupa tautan).
+
+Langkah:
+1. Buka menu Media Ajar.
+2. Pilih tab "Video Pembelajaran" atau "PowerPoint".
+3. Putar video atau buka presentasi.
+4. Catat poin penting.
+5. Setelah itu kerjakan Latihan Soal.
+
+Tips:
+- Gunakan kuota atau Wi-Fi yang cukup untuk memutar video.
+- Putar video dalam layar penuh bila perlu.
+- Gunakan earphone supaya suara terdengar jelas.
+
+
+================================================================
+[BAB-10] MENU LATIHAN SOAL
+================================================================
+ID        : BAB-10
+KATEGORI  : Menu
+KATA KUNCI: latihan soal, pilihan ganda, esai, jumlah soal
+
+Judul halaman: "Latihan Soal Interaktif".
+Keterangan: "Uji pemahamanmu dan jadikan hasilnya sebagai bahan
+belajar berikutnya."
+
+Pengaturan latihan:
+1. "Pilih jenis soal:"
+   - A. Pilihan Berganda (bawaan). Petunjuk: "Pilihlah jawaban
+     yang paling tepat!"
+   - B. Esai. Jawaban dituliskan sendiri oleh siswa.
+2. "Pilih materi:" dropdown. Nilai awal "Semua Materi", atau pilih
+   satu materi tertentu.
+3. "Jumlah soal:" penggeser (slider). Nilai awal 5. Geser ke kiri
+   untuk mengurangi dan ke kanan untuk menambah.
+
+Setelah pengaturan, soal tampil berurutan: "Soal 1", "Soal 2",
+dan seterusnya.
+
+Langkah:
+1. Buka menu Latihan Soal.
+2. Pilih jenis soal (Pilihan Berganda atau Esai).
+3. Pilih materi dan atur jumlah soal.
+4. Kerjakan soal satu per satu.
+   - Pilihan Berganda: pilih satu jawaban paling tepat.
+   - Esai: tulis jawaban dengan kalimat yang jelas.
+5. Kirim atau periksa jawaban, lalu lihat hasilnya.
+   [PERIKSA] nama tombol periksa dan tampilan hasil.
+6. Pelajari kembali materi yang masih salah.
+
+Catatan penilaian esai: jawaban esai dinilai secara manual oleh
+guru memakai indikator pada BAB-13.
+
+Tips:
+- Mulai dari "Semua Materi" untuk gambaran umum, lalu fokus ke
+  materi yang masih lemah.
+- Ulangi latihan dengan jumlah soal berbeda untuk melatih diri.
+
+
+================================================================
+[BAB-11] MENU GAME EDUKASI
+================================================================
+ID        : BAB-11
+KATEGORI  : Menu
+KATA KUNCI: game edukasi, wordwall, tebak istilah, susun struktur
+
+Judul halaman: "Game Edukasi Teks Deskripsi".
+Keterangan: "Belajar sambil bermain! Mulai dari Wordwall sampai
+tantangan mini."
+
+Tab permainan (geser ke samping bila ada tanda panah ">"):
+1. Wordwall        : game Wordwall bertema teks deskripsi.
+2. Tebak Istilah   : tantangan menebak istilah teks deskripsi.
+3. Susun Struktur  : tantangan menyusun struktur teks deskripsi.
+4. [PERIKSA] tab lain di sebelah kanan (geser untuk melihat).
+
+Wordwall - Teks Deskripsi:
+- Petunjuk: "Mainkan game Wordwall berikut untuk menguji
+  pemahamanmu."
+- Game tampil di halaman dengan judul "Soal Teks Deskripsi".
+- Layar awal meminta nama: "Enter your name:" (kolom "Name...")
+  dan pilihan "Remember me?".
+
+Langkah:
+1. Buka menu Game Edukasi.
+2. Pilih tab permainan.
+3. Untuk Wordwall: ketik nama pada kolom "Name...", lalu mulai
+   bermain sesuai petunjuk di layar game.
+4. Pilih jawaban atau kerjakan tantangan sampai selesai.
+5. Lihat skor atau hasil akhir di layar game.
+
+Tips:
+- Gunakan layar penuh bila tersedia.
+- Tulis nama dengan jelas supaya guru mudah mengenali hasilnya.
+- "Remember me?" menyimpan nama di perangkat agar tidak mengetik
+  ulang. Hilangkan centangnya bila memakai perangkat bersama.
+- Game Wordwall memerlukan internet.
+
+
+================================================================
+[BAB-12] MENU ICE BREAKING
+================================================================
+ID        : BAB-12
+KATEGORI  : Menu
+KATA KUNCI: ice breaking, youtube, wordwall, educaplay, refreshing
+
+Fungsi: aktivitas singkat untuk menyegarkan suasana belajar.
+Keterangan: "Pilih aktivitas singkat untuk menyegarkan suasana
+belajar."
+
+Tiga tab:
+1. YouTube    : video singkat penyegar suasana (misalnya gerakan
+                atau nyanyian). [PERIKSA] isi video.
+2. Wordwall   : "Permainan Wordwall". Petunjuk: "Mainkan aktivitas
+                Wordwall berikut. Gunakan mode layar penuh jika
+                tersedia agar permainan lebih nyaman." Permainan
+                menampilkan kartu bernomor (1, 2, 3, dst.).
+3. Educaplay  : permainan atau kuis dari Educaplay.
+                [PERIKSA] jenis permainan.
+
+Langkah:
+1. Buka menu Ice Breaking.
+2. Pilih tab: YouTube, Wordwall, atau Educaplay.
+3. Ikuti petunjuk di layar, bersama teman atau sesuai arahan
+   guru.
+4. Untuk Wordwall, ketuk kartu bernomor untuk memilih, lalu ikuti
+   instruksi pada kartu.
+5. Selesai, kembali ke menu materi.
+
+Kapan dipakai: sebelum pelajaran dimulai, saat siswa mulai jenuh,
+atau di sela pergantian kegiatan. Durasi yang disarankan 3 sampai
+5 menit.
+
+
+================================================================
+[BAB-13] MENU NILAI DAN INDIKATOR PENILAIAN ESAI
+================================================================
+ID        : BAB-13
+KATEGORI  : Menu
+KATA KUNCI: nilai, penilaian, indikator, esai, judul, identifikasi
+
+A. Menu Nilai   [PERIKSA]
+Fungsi: melihat hasil belajar (misalnya hasil latihan soal) dan
+ringkasan penilaian.
+Cara menggunakan:
+1. Buka menu Nilai.
+2. Lihat daftar atau ringkasan nilai.
+3. Gunakan hasil untuk menentukan materi yang perlu diulang.
+Catatan: sama seperti presensi, data nilai kemungkinan hanya
+tersimpan selama sesi berjalan. Catat atau ambil tangkapan layar
+bila perlu.
+
+B. Indikator Penilaian Esai Teks Deskripsi
+Judul halaman: "Indikator Penilaian Esai Teks Deskripsi".
+Keterangan: "Gunakan indikator berikut untuk menilai jawaban esai
+siswa secara manual berdasarkan dokumen indikator penilaian."
+Bagian ini dipakai guru untuk memeriksa esai. [PERIKSA] letaknya
+(di menu Nilai atau Latihan Soal jenis Esai).
+
+Expander "Kisi-kisi indikator penilaian":
+
+1. JUDUL
+   - Judul menggambarkan objek khusus yang dideskripsikan.
+   - Ditulis sebagai frasa atau konstruksi yang sesuai, bukan
+     kalimat lengkap.
+   - Penggunaan huruf kapital tepat.
+   - Tidak diakhiri tanda titik.
+
+2. IDENTIFIKASI
+   - Memperkenalkan atau menyebutkan objek yang dideskripsikan.
+   [PERIKSA] butir berikutnya dan indikator nomor 3 dan seterusnya
+   (misalnya deskripsi bagian, kaidah kebahasaan, ejaan).
+
+Cara guru memakai indikator:
+1. Buka expander "Kisi-kisi indikator penilaian".
+2. Baca jawaban esai siswa.
+3. Cocokkan jawaban dengan tiap butir indikator.
+4. Beri skor sesuai dokumen indikator penilaian.
+5. Catat nilai pada daftar nilai guru.
+
+Cara siswa memakai indikator:
+- Baca indikator sebelum menulis esai agar tahu apa yang dinilai.
+- Periksa judul: frasa, huruf kapital benar, tanpa titik.
+- Pastikan paragraf awal memperkenalkan objek.
+
+
+================================================================
+[BAB-14] RINGKASAN MATERI TEKS DESKRIPSI
+================================================================
+ID        : BAB-14
+KATEGORI  : Materi
+KATA KUNCI: pengertian, ciri-ciri, struktur, kaidah kebahasaan
+
+Catatan: bagian ini ringkasan umum pelengkap panduan. Materi
+lengkap ada pada menu Belajar Materi.
+
+1. Pengertian
+   Teks deskripsi adalah teks yang menggambarkan suatu objek
+   (benda, tempat, orang, suasana, atau peristiwa) secara rinci
+   sehingga pembaca seolah-olah melihat, mendengar, atau
+   merasakannya sendiri.
+
+2. Fungsi
+   Memberikan gambaran yang jelas dan hidup tentang objek kepada
+   pembaca.
+
+3. Ciri-ciri
+   - Menggambarkan objek tertentu secara rinci.
+   - Menggunakan kata sifat dan kata yang menggugah pancaindra.
+   - Bersifat memperlihatkan, bukan sekadar menyebutkan.
+   - Disusun dengan urutan yang teratur (misalnya dari atas ke
+     bawah atau dari dekat ke jauh).
+
+4. Struktur
+   - Judul: frasa yang menunjuk objek khusus, tanpa titik.
+   - Identifikasi: memperkenalkan objek yang dideskripsikan.
+   - Deskripsi bagian: menguraikan ciri-ciri objek bagian demi
+     bagian.
+   - Kesan (bila ada): penutup berupa kesan atau penilaian.
+
+5. Kaidah kebahasaan
+   - Kata sifat dan kata benda yang spesifik.
+   - Kalimat deskriptif.
+   - Kata kiasan atau majas bila diperlukan.
+   - Ejaan dan tanda baca yang benar.
+
+6. Pancaindra yang diamati
+   Penglihatan (warna, bentuk, ukuran), pendengaran (bunyi),
+   penciuman (aroma), pengecapan (rasa), dan peraba (tekstur,
+   suhu).
+
+
+================================================================
+[BAB-15] LANGKAH MENULIS TEKS DESKRIPSI
+================================================================
+ID        : BAB-15
+KATEGORI  : Materi
+KATA KUNCI: menulis, langkah, amati objek, susun kata, contoh
+
+Mengikuti alur di Beranda:
+1. AMATI OBJEK
+   Pilih satu objek. Amati dengan pancaindra, lalu catat
+   ciri-ciri khasnya.
+2. SUSUN KATA
+   Pilih kata yang tepat dan menarik. Ganti kata umum dengan kata
+   yang lebih spesifik.
+   Contoh: "bagus" -> "berkilau keemasan terkena cahaya senja".
+3. TULIS
+   Buat judul berupa frasa. Tulis paragraf identifikasi, lalu
+   uraikan bagian demi bagian.
+4. PERIKSA
+   Baca ulang. Pastikan gambaran jelas, urut, dan ejaan benar.
+   Cocokkan dengan indikator penilaian (BAB-13).
+
+Contoh singkat:
+Judul: Pantai Senja yang Tenang
+"Pantai itu terbentang luas dengan pasir putih yang halus
+ bagaikan tepung. Ombak berdebur pelan, membawa aroma asin yang
+ menyegarkan. Di kejauhan, perahu nelayan tampak kecil di bawah
+ langit jingga."
+
+
+================================================================
+[BAB-16] ALUR BELAJAR YANG DISARANKAN
+================================================================
+ID        : BAB-16
+KATEGORI  : Panduan
+KATA KUNCI: alur, urutan belajar, langkah, siswa
+
+1. Buka aplikasi dan baca Beranda.
+2. Isi Presensi.
+3. Lakukan Ice Breaking (3 sampai 5 menit).
+4. Lihat Daftar Materi atau tanyakan lewat Cari Materi.
+5. Pelajari isi pada Belajar Materi.
+6. Tonton video dan buka PowerPoint pada Media Ajar.
+7. Kerjakan Latihan Soal (Pilihan Berganda, lalu Esai).
+8. Bermain di Game Edukasi untuk memperkuat pemahaman.
+9. Periksa hasil di menu Nilai dan ulangi materi yang lemah.
+
+
+================================================================
+[BAB-17] PANDUAN UNTUK GURU
+================================================================
+ID        : BAB-17
+KATEGORI  : Panduan
+KATA KUNCI: guru, pembelajaran, presensi, penilaian, skenario
+
+Skenario pembelajaran satu pertemuan (contoh 2 x 40 menit):
+1. Pembuka (10 menit): presensi dan ice breaking.
+2. Inti 1 (20 menit): siswa belajar materi dan menonton video.
+3. Inti 2 (30 menit): latihan soal dan menulis esai deskripsi.
+4. Game (10 menit): Wordwall atau Tebak Istilah.
+5. Penutup (10 menit): refleksi dan penilaian esai dengan
+   indikator.
+
+Saran:
+- Catat rekap presensi dan nilai sebelum sesi berakhir.
+- Bagikan tautan aplikasi lewat grup kelas.
+- Beri contoh objek sekitar agar siswa mudah mengamati.
+- Gunakan indikator penilaian yang sama dengan yang dibaca siswa.
+
+
+================================================================
+[BAB-18] PEMECAHAN MASALAH
+================================================================
+ID        : BAB-18
+KATEGORI  : Bantuan
+KATA KUNCI: masalah, error, lambat, video, tombol, data hilang
+
+Masalah : Halaman tidak muncul atau lambat.
+Solusi  : Periksa internet, muat ulang halaman, tunggu aplikasi
+          aktif kembali.
+
+Masalah : Menu samping tidak terlihat di ponsel.
+Solusi  : Ketuk ikon ">>" di kiri atas.
+
+Masalah : Data presensi atau nilai hilang.
+Solusi  : Data hanya tersimpan selama sesi. Jangan memuat ulang
+          sebelum mencatat data.
+
+Masalah : Video atau game (Wordwall, Educaplay) tidak tampil.
+Solusi  : Periksa koneksi, muat ulang halaman, coba peramban lain,
+          atau buka dalam layar penuh.
+
+Masalah : Cari Materi tidak memberi jawaban.
+Solusi  : Gunakan kata kunci lebih singkat dan sesuai materi
+          teks deskripsi.
+
+Masalah : Soal tidak berubah saat jumlah soal diatur.
+Solusi  : Atur kembali jenis soal, materi, dan jumlah soal,
+          lalu ulangi.
+
+Masalah : Tombol tidak merespons.
+Solusi  : Tunggu beberapa detik, lalu coba lagi.
+
+
+================================================================
+[BAB-19] PERTANYAAN YANG SERING DIAJUKAN (FAQ)
+================================================================
+ID        : BAB-19
+KATEGORI  : Bantuan
+KATA KUNCI: faq, pertanyaan, jawaban
+
+T: Apakah aplikasi perlu diunduh?
+J: Tidak. Cukup dibuka lewat peramban dengan tautan dari guru.
+
+T: Apakah tanggal dan waktu presensi diisi manual?
+J: Tidak. Dicatat otomatis saat presensi dikirim.
+
+T: Apakah data presensi tersimpan selamanya?
+J: Tidak. Hanya selama sesi aplikasi berjalan.
+
+T: Ada berapa materi teks deskripsi?
+J: Delapan materi, dari pengertian hingga langkah menulis.
+
+T: Jenis soal apa yang tersedia?
+J: Pilihan Berganda dan Esai.
+
+T: Berapa jumlah soal bawaan?
+J: Lima soal. Dapat diubah dengan penggeser "Jumlah soal".
+
+T: Siapa yang menilai esai?
+J: Guru, secara manual memakai indikator penilaian.
+
+T: Apa saja game yang tersedia?
+J: Wordwall, Tebak Istilah, Susun Struktur, dan lainnya
+   (geser tab ke samping).
+
+T: Apakah Cari Materi memakai AI berbayar?
+J: Tidak. Jawaban diambil dari materi yang tersedia di aplikasi.
+
+T: Dari mana memulai?
+J: Dari Beranda, lalu pilih kegiatan di Menu Belajar.
+
+
+================================================================
+[BAB-20] RINGKASAN MENU
+================================================================
+ID        : BAB-20
+KATEGORI  : Ringkasan
+KATA KUNCI: ringkasan, daftar menu, fungsi
+
+Beranda         : sambutan dan alur belajar
+Presensi        : mengisi kehadiran (nama, kelas, nomor absen,
+                  status)
+Daftar Materi   : 8 kartu materi dengan "Pelajari Materi"
+Cari Materi     : tanya jawab dari materi, tombol "CARI JAWABAN"
+Belajar Materi  : membaca materi dari dropdown dan "Buka materi
+                  lengkap"
+Media Ajar      : tab Video Pembelajaran dan PowerPoint
+Latihan Soal    : Pilihan Berganda atau Esai, pilih materi dan
+                  jumlah soal
+Game Edukasi    : tab Wordwall, Tebak Istilah, Susun Struktur,
+                  dan lainnya
+Ice Breaking    : tab YouTube, Wordwall, Educaplay
+Nilai           : hasil belajar dan indikator penilaian esai
+
+
+================================================================
+[BAB-21] CATATAN VERIFIKASI ([PERIKSA])
+================================================================
+ID        : BAB-21
+KATEGORI  : Administrasi
+KATA KUNCI: verifikasi, periksa, perlu dicek
+
+Hal yang belum terlihat penuh dan perlu dicocokkan dengan
+aplikasi asli sebelum dokumen dianggap final:
+1. Pilihan lain pada Status Kehadiran (BAB-05) dan pesan
+   konfirmasi atau rekap presensi.
+2. Judul kartu materi nomor 2 sampai 8 (BAB-06 dan BAB-08).
+3. Cara PowerPoint ditampilkan pada Media Ajar (BAB-09).
+4. Nama tombol periksa jawaban dan tampilan hasil pada Latihan
+   Soal (BAB-10).
+5. Tab game lain setelah "Susun Struktur" (BAB-11).
+6. Isi video YouTube dan jenis permainan Educaplay pada Ice
+   Breaking (BAB-12).
+7. Tampilan menu Nilai dan letak indikator penilaian, serta
+   indikator nomor 2 (lanjutan) dan seterusnya (BAB-13).
+
+Setelah diperiksa, hapus tanda [PERIKSA] pada bab terkait.
+
+################################################################
+#                  AKHIR BUKU PANDUAN                          #
+################################################################
