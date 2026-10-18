@@ -2211,7 +2211,42 @@ elif menu == "🧊 Ice Breaking":
             use_container_width=True
         )
 
+elif menu == "📘 Buku Panduan":
 
+    st.header("📘 Buku Panduan Penggunaan Aplikasi")
+    st.write(
+        "Pilih bab untuk membaca petunjuk penggunaan "
+        "Ruang Belajar Digital."
+    )
+
+    if not buku_panduan:
+        st.warning(
+            "Buku panduan belum ditemukan atau isinya belum terbaca. "
+            "Pastikan file TXT sudah diunggah dengan benar."
+        )
+
+    else:
+        daftar_judul_bab = list(buku_panduan.keys())
+
+        bab_dipilih = st.selectbox(
+            "Pilih bab yang ingin dibaca:",
+            daftar_judul_bab
+        )
+
+        st.divider()
+        st.subheader(bab_dipilih)
+        st.text(buku_panduan[bab_dipilih])
+
+        with open(PANDUAN_PATH, "rb") as file:
+            isi_file = file.read()
+
+        st.download_button(
+            label="⬇️ Unduh Buku Panduan Lengkap",
+            data=isi_file,
+            file_name="buku_panduan_materi_teks_deskripsi.txt",
+            mime="text/plain",
+            use_container_width=True
+        )
 # =========================================================
 # MENU NILAI
 # =========================================================
