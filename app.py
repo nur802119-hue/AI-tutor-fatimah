@@ -564,8 +564,6 @@ def ambil_potongan_relevan(pertanyaan, isi, jumlah_maksimal=1800):
         terpilih = [daftar_skor[0][2][:jumlah_maksimal]]
     return "\n\n".join(terpilih)
 
-)
-
 # Database TXT dibaca saat aplikasi dimulai.
 database = baca_database()
 st.session_state.setdefault("riwayat_nilai", [])
